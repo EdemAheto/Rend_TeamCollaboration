@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
 import  {Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function LoginForm() {
   const navigate = useNavigate();
@@ -73,6 +74,8 @@ function LoginForm() {
 
     <Button className="log-button" variant="primary" type="submit">Login</Button>
     <Form.Label className="log-label">Not registered? <a  href='/register'>SignUp here</a> </Form.Label>
+    <Form.Label className="log-label"><Link to='/admin'>Click here if you are an administrator</Link></Form.Label>
+
   </Form>
 
   );
